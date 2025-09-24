@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.welcome-message {
+  text-align: center;
+  font-size: 30px;
+  color: #333;
+  margin-bottom: 30px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.welcome-message h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.welcome-message p {
+  font-size: 18px;
+  color: #777;
+  margin-top: 10px;
+}
+
+.user-details-form,
+.chat-container {
+  background-color: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  max-width: 100%;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.user-details-form {
+  transition: transform 0.3s ease-out;
+}
+
+.user-details-form input,
+.user-details-form select {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+#messages {
+  height: 300px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+.message {
+  display: flex;
+  margin: 10px 0;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.user-message {
+  background-color: #a2d2ff;
+  border-radius: 20px;
+  padding: 10px;
+  margin-left: auto;
+  max-width: 75%;
+  word-wrap: break-word;
+}
+
+.system-message {
+  background-color: #f2f2f2;
+  text-align: center;
+  color: #777;
+  padding: 8px;
+  border-radius: 5px;
+  font-style: italic;
+  margin: 10px 0;
+}
+
+input,
+select {
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+#leaveChat {
+  background-color: #f44336;
+  margin-top: 15px;
+}
+
+#leaveChat:hover {
+  background-color: #e53935;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
